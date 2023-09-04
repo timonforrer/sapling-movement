@@ -1,0 +1,17 @@
+---js
+{
+  layout: 'base.webc',
+  permalink: '',
+  eleventyComputed: {
+    title: data => data.item.meta.title,
+    permalink: data => `${data.item.meta.slug || ''}/index.html`,
+  },
+  pagination: {
+    data: 'sanity.modular',
+    size: 1,
+    alias: 'item',
+  }
+}
+---
+
+<main @html="renderHTML(item.content)"></main>
