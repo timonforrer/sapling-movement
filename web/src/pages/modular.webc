@@ -1,10 +1,11 @@
 ---js
 {
   layout: 'base.webc',
-  permalink: '',
   eleventyComputed: {
-    title: data => data.item.meta.title,
+    data: data => data.item,
+    description: data => data.item.meta.description,
     permalink: data => `${data.item.meta.slug || ''}/index.html`,
+    title: data => data.item.meta.title,
   },
   pagination: {
     data: 'sanity.modular',
@@ -13,5 +14,4 @@
   }
 }
 ---
-
-<main @html="renderHTML(item.content)"></main>
+<main class="container stack-m" @html="renderHTML(item.content)"></main>
