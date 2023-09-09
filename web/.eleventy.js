@@ -7,7 +7,7 @@ module.exports = function(config) {
   });
 
   config.addShortcode('renderHTML', renderHTML);
-  // config.addPassthroughCopy('src/bundle.css');
+  config.addPassthroughCopy('src/bundle.css');
 
   return {
     dir: {
