@@ -1,6 +1,6 @@
 export default {
   name: 'meta',
-  title: 'Meta',
+  title: 'Meta Info',
   type: 'object',
   fields: [
     {
@@ -20,6 +20,15 @@ export default {
       options: {
         source: 'meta.title'
       }
-    }
+    },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image'
+    },
   ],
+  options: {
+    collapsible: true,
+    collapsed: true,
+  },
 }
