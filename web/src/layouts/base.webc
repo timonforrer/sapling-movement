@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/bundle.css" webc:keep />
   </head>
   <body>
+    <header class="container">
+      <a href="/">Startseite</a>
+    </header>
     <template @raw="content" webc:nokeep></template>
   </body>
 </html>
